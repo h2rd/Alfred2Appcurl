@@ -8,7 +8,7 @@ $query = $_SERVER['argv'][1];
 $detecturl = "http://www.appcurl.com/api/0/appcurl/qs/?q=" . urlencode( $query );
 $items = json_decode( $wf->request( $detecturl ), true);
 
-$wf->result(0, $query, 'Open in appcurl.com', '', 'icon.png');
+$wf->result(time(), $query, 'Open in appcurl.com', '', 'icon.png');
 
 if ($items && $items['total']):
     foreach($items['result'] as $item):
