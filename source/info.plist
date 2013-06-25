@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>IgorSkrynkovskyy.AppCurl</string>
+	<key>connections</key>
+	<dict>
+		<key>373B8A9E-8AD2-459F-AFA4-22E8E142FD81</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DB61C478-35EB-4A09-A792-83D40F7BFAFD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Igor Skrynkovskyy</string>
+	<key>description</key>
+	<string>Appcurl Search</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Appcurl Search</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>userinput="{query}"
+
+if [[ $userinput == http* ]]; then
+  open {query}
+else
+  open http://www.appcurl.com/?q={query}
+fi</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DB61C478-35EB-4A09-A792-83D40F7BFAFD</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>appcurl</string>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>php -f main.php "{query}"</string>
+				<key>subtext</key>
+				<string>App name</string>
+				<key>title</key>
+				<string>Appcurl</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>373B8A9E-8AD2-459F-AFA4-22E8E142FD81</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>373B8A9E-8AD2-459F-AFA4-22E8E142FD81</key>
+		<dict>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>DB61C478-35EB-4A09-A792-83D40F7BFAFD</key>
+		<dict>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://twitter.com/h2rd</string>
+</dict>
+</plist>
